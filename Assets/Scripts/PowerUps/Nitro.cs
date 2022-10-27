@@ -15,8 +15,15 @@ public class Nitro : MonoBehaviour
         //checar si el objeto entrante es el jugador
         if (_other.tag == "Player")
         {
-            ply.upVelocity *= 2;
+            ply.upVelocity *= 2.5f;
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            Invoke("outNitro", 5);
         }
-        Destroy(gameObject);
+        Destroy(gameObject, 5);
+    }
+
+    void outNitro()
+    {
+        ply.upVelocity /= 2.5f;
     }
 }
