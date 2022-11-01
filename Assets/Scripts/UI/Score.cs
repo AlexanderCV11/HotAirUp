@@ -15,6 +15,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         score += 1 * Time.deltaTime / 3;
-        scoreText.SetText("Height: " + score);
+        scoreText.SetText("Height: " + (int)score);
     }
 }
