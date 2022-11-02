@@ -10,10 +10,12 @@ public class PlayerConttroller : MonoBehaviour
     public float upVelocity;
     public bool escudo = false;
     public Rigidbody Ply;
+    public ParticleSystem particle;
 
     void Start()
     {
         Ply = GetComponent<Rigidbody>();
+        particle = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame

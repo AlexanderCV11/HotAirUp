@@ -16,6 +16,7 @@ public class Escudo : MonoBehaviour
         if (_other.tag == "Player")
         {
             ply.escudo = true;
+            ply.particle.Play();
         }
         Destroy(gameObject);
     }

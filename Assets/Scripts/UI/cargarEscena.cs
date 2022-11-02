@@ -11,6 +11,14 @@ public class cargarEscena : MonoBehaviour
     {
         activado = !activado;
         backGround.SetActive(activado);
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void cambiarEscena( string nombreEscena)
